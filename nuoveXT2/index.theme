@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=nuoveXT.2.2
-Comment=nuoveXT 2.2 Icon Theme for GNOME
+Comment=nuoveXT 2.2 Icon Theme for LXDE
 Inherits=nuoveXT-1.6,Tango,gnome,crystalsvg
 Example=x-directory-normal
 
