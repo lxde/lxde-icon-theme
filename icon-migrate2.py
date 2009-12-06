@@ -77,28 +77,8 @@ def replace_link_with_real_file(file):
     real_path = os.path.realpath(file)
     os.unlink(file)
     shutil.copy2(real_path, file)
-    print 'copy %s to %s' % (real_path, file)
+    print 'convert link to real file => copy %s to %s' % (real_path, file)
 
-
-def copy_old_name_to_new(context_dir, mapping, full_old_name):
-    full_new_name = os.path.join(context_dir, mapping.new_name);
-    if not os.path.exists(full_old_name):
-        return
-
-    (icon_name, ext) = os.path.splitext(full_old_name)
-    try:
-        shutil.copy2(full_old_name, full_new_name + ext)
-    finally:
-        print 'error copying %s to %s' % (full_old_name, full_new_name + ext)
-
-    for old_name in mapping.old_names:
-        full_path = os.path.join(context_dir, old_name + ext)
-        if full_path != full_old_name:
-            if not os.path.exists(full_path):
-                try:
-                    shutil.copy2(full_old_name, full_path)
-                finally:
-                    print 'error copying %s to %s' % (full_old_name, full_path)
 
 def convert_links_to_copies():
     for size in sizes:
@@ -210,15 +190,16 @@ def find_icon_file_of_size(size, icon_name):
     return None, None
 
 def fix_icons_of_specified_size(size, subdir, mappings):
-    print 'fix icons in %s of size: %d' % (subdir, size)
+    print 'fix icons in %s of size %d' % (subdir, size)
     for mapping in mappings:
+        print 'new_name: %s, %s', (subdir, mapping.new_name)
         dir = os.path.join(icon_theme_dir, subdir)
         (fpath, ext) = find_icon_file_in_dir(dir, mapping.new_name)
         if not fpath: # icon with new_name is not found, choose one icon from old_names
             choices=[]
             for old_name in mapping.old_names:
-                for subdir in sizes[size]:
-                    dir = os.path.join(icon_theme_dir, subdir)
+                for subdir2 in sizes[size]:
+                    dir = os.path.join(icon_theme_dir, subdir2)
                     (fpath2, ext2) = find_icon_file_in_dir(dir, old_name)
                     if fpath2:
                         choices.append((fpath2, ext2))
@@ -320,6 +301,7 @@ for size in sizes:
             ctx_dirname = os.path.basename(subdir)
             if ctx_dirname == ctx.name:
                 sub = subdir
+                print 'sub: %s' % sub
                 break
         if not sub:
             sub = ctx.name
