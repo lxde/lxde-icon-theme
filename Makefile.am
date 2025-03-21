@@ -3383,6 +3383,7 @@ install-data-hook:
 	$(LN_S) -f x-office-document.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/mimetypes/gnome-mime-application-vnd.stardivision.writer.png
 	$(LN_S) -f x-office-document.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text.png
 	$(LN_S) -f users.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/config-users.png
+	$(LN_S) -f users.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/system-users.png
 	$(LN_S) -f gnome-screenshot.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/gnome-panel-screenshot.png
 	$(LN_S) -f utilities-system-monitor.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/gnome-monitor.png
 	$(LN_S) -f gnome-app-install.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/gnome-settings-default-applications.png
@@ -3483,6 +3484,7 @@ install-data-hook:
 	$(LN_S) -f document-print.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/fileprint.png
 	$(LN_S) -f document-print.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/gtk-print.png
 	$(LN_S) -f document-print.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/stock_print.png
+	$(LN_S) -f ../actions/document-print.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/printer.png
 	$(LN_S) -f ../actions/document-print.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-printer.png
 	$(LN_S) -f ../actions/edit-delete.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/status/edittrash.png
 	$(LN_S) -f edit-delete.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/editdelete.png
@@ -3505,11 +3507,14 @@ install-data-hook:
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-dvd.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gtk-cdrom.png
 	$(LN_S) -f ../devices/media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/gtk-cdrom.png
+	$(LN_S) -f gtk-close.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/window-close.png
+	$(LN_S) -f stock_exit.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/actions/application-exit.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-cdrw.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-dvdrw.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/dvd_unmount.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-cdrom.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/cdrom_unmount.png
+	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/drive-optical.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-cdrom.png
 	$(LN_S) -f ../devices/media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/nautilus-cd-burner.png
 	$(LN_S) -f media-optical.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/cdwriter_unmount.png
@@ -3525,10 +3530,14 @@ install-data-hook:
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-media-cf.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-media-sm.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-media-ms.png
+	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-flash.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/usbpendrive_unmount.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-removable.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-media-sdmmc.png
 	$(LN_S) -f drive-removable-media.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/gnome-dev-media-memory.png
+	$(LN_S) -f gnome-dev-floppy.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/media-floppy.png
+	$(LN_S) -f gnome-dev-ipod.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/multimedia-player.png
+	$(LN_S) -f gnome-dev-keyboard.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/devices/input-keyboard.png
 	$(LN_S) -f applications-office.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/xfce-office.png
 	$(LN_S) -f applications-office.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/redhat-office.png
 	$(LN_S) -f applications-office.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/package_office.png
@@ -3541,6 +3550,9 @@ install-data-hook:
 	$(LN_S) -f internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/web-browser.png
 	$(LN_S) -f ../apps/internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/gnome-globe.png
 	$(LN_S) -f internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/redhat-web-browser.png
+	$(LN_S) -f gnome-logout.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/system-log-out.png
+	$(LN_S) -f gnome-settings-theme.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/preferences-desktop-theme.png
+	$(LN_S) -f update-manager.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/apps/system-software-update.png
 	$(LN_S) -f ../apps/internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/xfce-internet.png
 	$(LN_S) -f ../apps/internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/stock_internet.png
 	$(LN_S) -f ../apps/internet-web-browser.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/package_network.png
@@ -3562,6 +3574,7 @@ install-data-hook:
 	$(LN_S) -f applications-accessories.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/gnome-util.png
 	$(LN_S) -f applications-accessories.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/package_utilities.png
 	$(LN_S) -f applications-accessories.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/redhat-accessories.png
+	$(LN_S) -f applications-accessories.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/applications-utilities.png
 	$(LN_S) -f preferences-desktop.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/kcontrol.png
 	$(LN_S) -f preferences-desktop.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/xfce4-settings.png
 	$(LN_S) -f preferences-desktop.png $(DESTDIR)$(datadir)/icons/nuoveXT2/36x36/categories/gnome-settings.png
