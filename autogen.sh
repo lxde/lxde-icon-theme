@@ -5,7 +5,7 @@ AUTOMAKE=${AUTOMAKE:-automake}
 AM_INSTALLED_VERSION=$($AUTOMAKE --version | sed -e '2,$ d' -e 's/.* \([0-9]*\.[0-9]*\).*/\1/')
 
 case "$AM_INSTALLED_VERSION" in
-    1.1[0-9])
+    1.[12][0-9])
 	;;
     *)
 	echo
